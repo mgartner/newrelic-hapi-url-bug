@@ -1,22 +1,24 @@
-var http = require('http');
+'use strict';
 
-var options = {
+const http = require('http');
+
+const options = {
   host: 'localhost',
   port: 3000,
   path: '/hello'
 };
 
-callback = function(response) {
-  var str = '';
+let callback = (response) => {
+  let str = '';
 
-  response.on('data', function (chunk) {
+  response.on('data', (chunk) => {
     str += chunk;
   });
 
-  response.on('end', function () {
+  response.on('end', () => {
     console.log(str);
   });
-}
+};
 
 http.request(options, callback).end();
 http.request(options, callback).end();

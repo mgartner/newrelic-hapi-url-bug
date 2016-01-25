@@ -18,7 +18,7 @@ server.ext('onPostAuth', (request, reply) => {
 server.route({
   method: 'GET',
   path: '/hello',
-  handler: function (request, reply) {
+  handler: (request, reply) => {
     reply('Hello, world!');
   }
 });

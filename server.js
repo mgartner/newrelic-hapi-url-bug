@@ -13,32 +13,7 @@ server.ext('onPostAuth', (request, reply) => {
   .then(() => {
     reply.continue();
   });
-
-  //setTimeout(() => {
-  //  reply.continue();
-  //}, Math.floor(Math.random() * 5000));
-  //Bluebird.resolve()
-  //.then(() => {
-  //  console.log('extension');
-  //});
-  //reply.continue();
 });
-
-//server.register({
-//  register: (server, options, next) => {
-//    server.ext('onPostAuth', (request, reply) => {
-//      console.log('extension');
-//      reply.continue();
-//    });
-//
-//    next();
-//  },
-//  register
-//}, (err) => {
-//  if (err) {
-//    console.error('Failed to load plugin:', err);
-//  }
-//});
 
 server.route({
   method: 'GET',

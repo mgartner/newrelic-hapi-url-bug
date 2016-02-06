@@ -5,7 +5,7 @@ const http = require('http');
 const options = {
   host: 'localhost',
   port: 3000,
-  path: '/hello'
+  path: '/hello/mario'
 };
 
 let callback = (response) => {

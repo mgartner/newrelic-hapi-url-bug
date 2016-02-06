@@ -37,3 +37,7 @@ node client.js
 ```
 
 Notice the transaction URLs printed in the `node server.js` output. Some of them are correctly reported as `WebTransaction/Hapi/GET//hello`, but most of them are incorrectly reported as `WebTransaction/NormalizedUri/*`.
+
+### Workaround
+
+I've found a quick work-around to avoid the issue, by calling `NewRelic.setTransactionName` in the `onPostAuth` hook of a Hapi server. Look at `server.workaround.js` for an example.

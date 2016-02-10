@@ -2,10 +2,17 @@
 
 const http = require('http');
 
+//const options = {
+//  host: 'localhost',
+//  port: 8443,
+//  path: '/v1/postcards',
+//  auth: 'key_3:'
+//};
+
 const options = {
   host: 'localhost',
   port: 3000,
-  path: '/hello/mario'
+  path: '/hello/postcards'
 };
 
 let callback = (response) => {

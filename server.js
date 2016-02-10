@@ -11,7 +11,10 @@ server.connection({ port: 3000 });
 server.ext('onPostAuth', (request, reply) => {
   Bluebird.resolve()
   .then(() => {
-    reply.continue();
+    // Use setTimeout to simulate asynchronous I/O call.
+    setTimeout(() => {
+      reply.continue();
+    }, Math.random() * 500);
   });
 });
 
